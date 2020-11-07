@@ -1,6 +1,6 @@
 # ムードナルド・トランプ
 
-[![IMAGE ALT TEXT HERE](https://jphacks.com/wp-content/uploads/2020/09/JPHACKS2020_ogp.jpg)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![IMAGE ALT TEXT HERE](https://jphacks.com/wp-content/uploads/2020/09/JPHACKS2020_ogp.jpg)](https://youtu.be/4ZSKtNCwXr0)
 
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
@@ -54,4 +54,3 @@ Webサービスとして提供できるようにホームページを作成す�
 * canvasタグを複数使い，トランプが透過して見えるようにする機能を作成 [/static/script.js](https://github.com/jphacks/D_2009/blob/master/static/script.js)
 * ミライ小町にモーションをつけ，複数視点のアニメーションを作成 [/mmd/mmdSetting.js](https://github.com/jphacks/D_2009/blob/master/mmd/mmdSetting.js)
 * Hand Pose Modelで手の動きを検知し，トランプをジェスチャー操作 [/static/handpose.js](https://github.com/jphacks/D_2009/blob/master/static/handpose.js)
-
