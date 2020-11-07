@@ -19,16 +19,22 @@
 ## 開発技術
 ### 活用した技術
 #### API・データ
-* 
-* 
+* ミライ小町の3Dデータ（バンダイナムコ研究所様提供）
+* SkyWay
+* Hand Pose Model
 
 #### フレームワーク・ライブラリ・モジュール
-* 
-* 
+* HTML/CSS
+* JavaScript
+* Node.js
+* Three.js
+* Redis
+* TensorFlow
+* WebRTC
+* Socket.IO
 
 #### デバイス
-* 
-* 
+* PC(Webブラウザ)
 
 ### 独自技術
 #### ハッカソンで開発した独自機能・技術

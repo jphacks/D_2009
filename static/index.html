@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Trump Game</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
+    <script src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+    <link href="/static/style.css" media="all" rel="Stylesheet" type="text/css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/skyway/skyway_style.css">
+    <!-- Favicons -->
+    <link href="/static/favicon.ico" rel="icon">
+    <link href="/static/favicon.ico" rel="apple-touch-icon">
+
+    <!-- for displaying mmd -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/build/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/libs/mmdparser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ammo.js@0.0.10/ammo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/loaders/TGALoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/loaders/MMDLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/MMDAnimationHelper.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/effects/OutlineEffect.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/CCDIKSolver.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/MMDPhysics.js"></script>
+
+  </head>
+  <body style="width:100%;height:100%;margin:0;" onload="get_query(); player_join(); load_img(); start_mmd();">
+    <div class="container">
+    <h1 id='start-msg'>Press Space to Start</h1>
+    <!-- <input type="button" value="pose1" onclick="PoseClickEvent(this.value)" id="special-button"> -->
+
+    <canvas id="mmd-model" width=400px height=400px style="z-index:0"></canvas>
+    <div class="box-wrap">
+      <div class="box tl" id='player1'>
+          <p class='player-name'>Player1</p>
+          <h2 class="win-msg" id='win-msg1'></h2>
+          <video class="streams" id="person1"></video>
+          <canvas id="canvas1" width=450px height=300px style="object-fit:none;" class="game-canvas"></canvas>
+          <canvas id="ink-canvas1" width=450px height=300px style="object-fit:none;" class="ink-canvas"></canvas>
+          <canvas id="ink-only-canvas1"  class="ink-only-canvas"></canvas>
+      </div>
+      <div class="box tr" id='player2'>
+          <p class='player-name'>Player2</p>
+          <h2 class="win-msg" id='win-msg2'></h2>
+          <video class="streams" id="person2"></video>
+          <canvas id="canvas2" width=450px height=300px style="object-fit:none;" class="game-canvas"></canvas>
+          <canvas id="ink-canvas2" width=450px height=300px style="object-fit:none;" class="ink-canvas"></canvas>
+          <canvas id="ink-only-canvas2"  class="ink-only-canvas"></canvas>
+      </div>
+      <div class="box bl" id='player3'>
+        <p class='player-name'>Player3</p>
+        <h2 class="win-msg" id='win-msg3'></h2>
+        <video class="streams" id="person3"></video>
+        <canvas id="canvas3" width=450px height=300px style="object-fit:none;" class="game-canvas"></canvas>
+        <canvas id="ink-canvas3" width=450px height=300px style="object-fit:none;" class="ink-canvas"></canvas>
+        <canvas id="ink-only-canvas3"  class="ink-only-canvas"></canvas>
+      </div>
+      <div class="box br" id='player4'>
+        <p class='player-name'>Player4</p>
+        <h2 class="win-msg" id='win-msg4'></h2>
+        <video class="streams" id="person4"></video>
+        <canvas id="canvas4" width=450px height=300px style="object-fit:none;" class="game-canvas"></canvas>
+        <canvas id="ink-canvas4" width=450px height=300px style="object-fit:none;" class="ink-canvas"></canvas>
+        <canvas id="ink-only-canvas4"  class="ink-only-canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- <button id="skill_trigger" class="skill_button">必殺技</button> -->
+    <div class="button-bar">
+      <button type="button" id="ink-button" onclick="setInkFlag();">スキル</button>
+      <button id="audio_mute_trigger" class="mute_button">ミュート</button>
+      <button id="video_mute_trigger" class="mute_button">ビデオの停止</button>
+      <h4 id="skill-msg"></h4>
+    </div>  
+
+    <div id="image-wrapper" style="display: none;"></div>
+
+  </div>
+  <img src="./static/red.jpeg" id="alart_img"></img>
+  </body>
+  <script src="/static/script.js"></script>
+  <script src="/static/handpose.js"></script>
+  <script src="/static/draw_ink.js"></script>
+  <script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  <script src="/skyway/key.js"></script>
+  <script src="/skyway/skyway_script.js"></script>
+  <script src="/mmd/mmdSetting.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+
+.container {
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* room */
+/* .room {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  gap: 8px;
+  margin: 0 8px;
+} */
+
+.room .messages {
+  background-color: #eee;
+  min-height: 100px;
+  padding: 8px;
+  margin-top: 0;
+}
+
+.streams{
+  position: absolute;
+  /* float:left; */
+  top:15%;
+  /*
+  bottom: 10%;
+  display: inline-block;*/
+  margin: 0 auto;
+  /* background-color: #f6fbff; */
+  height: auto;
+  width: 100%;
+  max-height:85%;
+  transform:scaleX(-1);
+}
+
+.box-wrap{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 90%;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color:white;
+  width: 50%;
+  height: 50%;
+  border: 1px solid whitesmoke;
+  box-sizing: border-box;
+}
+
+.tl{
+  top: 0;
+  left: 0;
+}
+
+.tr{
+  top: 0;
+  right: 0;
+}
+
+.br{
+  bottom:0;
+  right: 0;
+}
+
+.bl{
+  bottom:0;
+  left: 0;
+}
+
+#audio_mute_trigger{
+  position: relative;
+  /* bottom: 4%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); */
+
+}
+
+#video_mute_trigger{
+  position: relative;
+  /* bottom: 0%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); */
+}
+
+.mute_button{
+  background:rgb(0, 119, 255);
+  /* background: #daa520; */
+  /* background-color: #daa520; */
+  background-color: rgb(0, 132, 255);
+  border-color: #daa520;
+  /* border: none; */
+  border-radius: 100vh;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  z-index: 9999;
+  margin: 20px;
+
+}

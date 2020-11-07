@@ -1,0 +1,19 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engine": {
+    "node": "v10.13.x",
+    "npm": "6.9.x"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "json-cyclic": "^1.0.2",
+    "redis": "^3.0.2",
+    "socket.io": "^2.3.0"
+  }
+}
