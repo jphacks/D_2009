@@ -51,7 +51,7 @@ Webサービスとして提供できるようにホームページを作成す�
 
 ### 独自技術
 #### ハッカソンで開発した独自機能・技術
-* canvasタグを複数使い，トランプが透過して見えるようにする機能を作成[/static/script.js](https://github.com/jphacks/D_2009/blob/master/static/script.js)
-* ミライ小町にモーションをつけ，複数視点のアニメーションを作成[/mmd/mmdSetting.js](https://github.com/jphacks/D_2009/blob/master/mmd/mmdSetting.js)
-* Hand Pose Modelで手の動きを検知し，トランプをジェスチャー操作[/static/handpose.js](https://github.com/jphacks/D_2009/blob/master/static/handpose.js)
+* canvasタグを複数使い，トランプが透過して見えるようにする機能を作成 [/static/script.js](https://github.com/jphacks/D_2009/blob/master/static/script.js)
+* ミライ小町にモーションをつけ，複数視点のアニメーションを作成 [/mmd/mmdSetting.js](https://github.com/jphacks/D_2009/blob/master/mmd/mmdSetting.js)
+* Hand Pose Modelで手の動きを検知し，トランプをジェスチャー操作 [/static/handpose.js](https://github.com/jphacks/D_2009/blob/master/static/handpose.js)
 
