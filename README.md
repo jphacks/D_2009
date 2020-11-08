@@ -1,6 +1,6 @@
 # ムードナルド・トランプ
 
-[![IMAGE ALT TEXT HERE](./pictures/トプ画.png)](https://youtu.be/4ZSKtNCwXr0)
+[![IMAGE ALT TEXT HERE](./pictures/top.png)](https://youtu.be/4ZSKtNCwXr0)
 
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
