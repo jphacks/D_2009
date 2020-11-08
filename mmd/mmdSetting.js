@@ -15,19 +15,9 @@ const MotionObjects = [
   { id: "loop", VmdClip: null, AudioClip: false },
 ];
 
-
-// window.onload = () => {
-//   Init();
-//   LoadModeler();
-
-  // Render();
-// }
-
 function start_mmd(){
   Init();
   LoadModeler();
-  // Render();
-
 }
 
 /*
@@ -36,53 +26,16 @@ function start_mmd(){
  */
 (Init = () => {
   scene = new THREE.Scene();
-
   const ambient = new THREE.AmbientLight(0xeeeeee);
   scene.add(ambient);
-
-  // renderer = new THREE.WebGLRenderer({ alpha: true });
-
   renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#mmd-model'),
     alpha: true 
   });
 
   renderer.setPixelRatio(window.devicePixelRatio);
-  // renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setSize(window.innerWidth*0.9, window.innerHeight*0.9);
   renderer.setClearColor(0xcccccc, 0);
-
-  // documentにMMDをセットする
-  // document.body.appendChild(renderer.domElement);
-  // mmdCanvas.appendChild(renderer.domElement);
-
-
-  //cameraの作成
-  // var rightLeft=50;
-  // var frontBehind=40;
-  // var direction=4;
-  // switch (direction) {
-  //   case 1:
-  //     rightLeft=-rightLeft;
-  //     break;
-  //   case 2:
-  //     break;
-  //   case 3:
-  //     rightLeft=-rightLeft;
-  //     frontBehind=-frontBehind;
-  //     break;
-  //   case 4:
-  //     frontBehind=-frontBehind;
-  //     break;
-  //   default:
-  //     console.log("cannot specify direction");
-  //     break;
-  // }
-
-  // camera = new THREE.PerspectiveCamera(50, windowWidth / windowHeight, 1, 1000);
-  // camera.position.set(-rightLeft, 11, -frontBehind);
-  // camera.lookAt(new THREE.Vector3(rightLeft, 0, frontBehind));
-
 })
 
 /*
@@ -151,9 +104,6 @@ function start_mmd(){
   await Promise.all(MotionObjects.map(async (MotionObject) => {
     return await LoadAudio(MotionObject.id);
   }));
-
-  //Set VMD on Mesh
-  // VmdControl("loop", true);
 })
 
 /*
@@ -219,11 +169,6 @@ VmdControl = (id, loop,direction) => {
     mixer.existingAction(MotionObjects[index].VmdClip).setLoop(THREE.LoopOnce);
   }
 
-  // VMD Loop Event
-  // mixer.addEventListener("loop", (event) => {
-  //   console.log("loop");
-  // });
-
   // VMD Loop Once Event
   mixer.addEventListener("finished", (event) => {
     console.log("finished");
@@ -264,18 +209,3 @@ onError = (xhr) => {
     helper.update(clock.getDelta());
   }
 })
-
-/*
- * Click Event
- */
-PoseClickEvent = (id) => {
-  console.log("special button pressed");
-  switch (id) {
-    case "pose1":
-      VmdControl("loop", false,3);
-      break;
-    default:
-      VmdControl("loop", false,1);
-      break;
-  }
-}

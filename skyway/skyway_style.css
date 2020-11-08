@@ -6,14 +6,6 @@
   width: 100%;
 }
 
-/* room */
-/* .room {
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
-  gap: 8px;
-  margin: 0 8px;
-} */
-
 .room .messages {
   background-color: #eee;
   min-height: 100px;
@@ -78,17 +70,10 @@
 
 #audio_mute_trigger{
   position: relative;
-  /* bottom: 4%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%); */
-
 }
 
 #video_mute_trigger{
   position: relative;
-  /* bottom: 0%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%); */
 }
 
 .mute_button{

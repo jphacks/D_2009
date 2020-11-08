@@ -3,11 +3,6 @@ html{
     background-color:  #004840;
 }
 
-/* darkcyan */
-/* rgb(226, 199, 168) */
-/* rgb(70, 145, 145) */
-/* rgb(12, 59, 90) */
-
 .player-name{
     position: absolute;
     top: 10px;
@@ -17,8 +12,6 @@ html{
     font-family: 'Lobster', cursive;
     margin:0;
     color:whitesmoke;
-    /* orange */
-
 }
 
 #start-msg{
@@ -29,57 +22,8 @@ html{
     left:50%;
     transform: translateY(-50%) translateX(-50%);
     color: #daa520;
-    /* #daa520 */
     z-index: 999;
 }
-
-/*#player1,#player2,#player3,#player4{
-    background-color: #004840;
-    height:350px;
-    width:450px;
-    padding:0;
-    color:white;
-}
-
-.win-msg{
-    font-family: 'Lobster', cursive;
-    font-size:30px;
-    position:absolute;
-    top: 10px;
-    left: 50%;
-    color:#daa520;
-    margin:0;
-    height:50px;
-}
-
-#player1{
-    width:33%;
-    position:absolute;
-    top:0%;
-    left:50%;
-    transform: translateX(-50%);
-}
-#player2{
-    width:33%;
-    position:absolute;
-    top:50%;
-    left:0%;
-    transform: translateY(-50%);
-}
-#player3{
-    width:33%;
-    position:absolute;
-    bottom:0%;
-    left:50%;
-    transform: translateX(-50%);
-}
-#player4{
-    width:33%;
-    position:absolute;
-    top:50%;
-    right:0%;
-    transform: translateY(-50%);
-}*/
 
 .win-msg{
     font-family: 'Lobster', cursive;
@@ -92,27 +36,6 @@ html{
     height:15%;
     z-index: -1;
 }
-
-/* #win-msg1{
-    top:200px;
-    left:50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-#win-msg2{
-    top:50%;
-    left:225px;
-    transform: translateY(-50%) translateX(-50%);
-}
-#win-msg3{
-    bottom:150px;
-    left:50%;
-    transform: translateY(+50%) translateX(-50%);
-}
-#win-msg4{
-    top:50%;
-    right:225px;
-    transform: translateY(-50%) translateX(+50%);
-} */
 
 .game-canvas{
     /* width:450px;
@@ -192,14 +115,6 @@ html{
     z-index:5;
 }
 
-/* #ink-button{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    z-index: 9999;
-} */
-
 #mmd-model{
     position:absolute;
     top:55%;
@@ -224,10 +139,6 @@ html{
     position: relative;
     margin: 15px;
     margin-left: 40px;
-    /* position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%); */
     z-index: 9999;
 }
   
@@ -240,11 +151,7 @@ html{
     position:relative;
     display:inline-block;
     width:50%;
-    /* top:10%;
-    left:50%;
-    transform: translateY(-50%) translateX(-50%); */
     color: #daa520;
-    /* #daa520 */
     z-index: 3;
 }
 
