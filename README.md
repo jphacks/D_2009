@@ -1,6 +1,6 @@
 # ムードナルド・トランプ
 
-[![IMAGE ALT TEXT HERE](./pictures/top.png)](https://youtu.be/4ZSKtNCwXr0)
+[![IMAGE ALT TEXT HERE](./pictures/top.png)](https://youtu.be/cAg8VohBdW8)
 
 ## 製品概要
 ### 背景(製品開発のきっかけ、課題等）
@@ -93,4 +93,4 @@ TensorFlowで提供されている[Hand Pose Model](https://github.com/tensorflo
 * Hand Pose Modelで手の関節の位置を検知し，トランプをジェスチャー操作 （[/static/handpose.js](https://github.com/jphacks/D_2009/blob/master/static/handpose.js)）
 
 ### デモ動画
-[![](http://img.youtube.com/vi/4ZSKtNCwXr0/0.jpg)](http://www.youtube.com/watch?v=4ZSKtNCwXr0 "")
+[![](http://img.youtube.com/vi/4ZSKtNCwXr0/0.jpg)](https://youtu.be/cAg8VohBdW8 "")
